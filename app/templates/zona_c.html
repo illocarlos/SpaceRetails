@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg" href="{{ url_for('static', filename=logo) }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        SpaceRetail - Zaragoza
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/paper-dashboard.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/pathfinder.css') }}" rel="stylesheet" />
+</head>
+
+<body class="">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="white" data-active-color="danger">
+            <div class="logo">
+                <a href="" class="simple-text logo-mini"></a>
+                <a href="/zaragoza/" class="simple-text logo-normal">
+                    <div class="logo-image-big" style="position: relative; right: 8px">
+                        <img src="{{ url_for('static', filename=logo) }}" width="150" height="150">
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li>
+                        <a href="/zaragoza">
+                            <i class="nc-icon nc-map-big"></i>
+                            <p class="capitalize">Zaragoza</p>
+                        </a>
+                    </li>
+                    <li style="height: 50px;">
+                        <a href="/zona_delicias">
+                            <i class="nc-icon nc-map-big"></i>
+                            <p class="capitalize">Calle Delicias</p>
+                        </a>
+                    </li>
+                    <li style="height: 30px;" class="active " >
+                        <a href="/zona_casco">
+                            <i class="nc-icon nc-map-big"></i>
+                            <p class="capitalize">Casco Histórico</p>
+                        </a>
+                    </li>
+                    <li style="height: 30px;">
+                        <a href="/zona_c">
+                            <i class="nc-icon nc-simple-delete"></i>
+                            <p class="capitalize" style="font-weight: bolder;">Zona C</p>
+                        </a>
+                    </li>
+                    <li  style="height: 30px;">
+                        <a href="/pza_san_felipe">
+                            <i class="nc-icon nc-simple-delete"></i>
+                            <p class="capitalize">Plaza San Felipe</p>
+                        </a>
+                    </li>
+                    <li  style="height: 30px;">
+                        <a href="/zona_d">
+                            <i class="nc-icon nc-simple-delete"></i>
+                            <p class="capitalize">Zona D</p>
+                        </a>
+                    </li>
+                    <li  style="height: 30px;">
+                        <a href="/pza_san_pedro">
+                            <i class="nc-icon nc-simple-delete"></i>
+                            <p class="capitalize">Plaza San Pedro</p>
+                        </a>
+                    </li>
+                    <li  style="height: 30px;">
+                        <a href="/zona_e">
+                            <i class="nc-icon nc-simple-delete"></i>
+                            <p class="capitalize">Zona E</p>
+                        </a>
+                    </li>
+                    <li  style="height: 30px;">
+                        <a href="/zona_f">
+                            <i class="nc-icon nc-simple-delete"></i>
+                            <p class="capitalize">Zona F</p>
+                        </a>
+                    </li>
+                    <li style="height: 30px;">
+                        <a href="/pza_justicia">
+                            <i class="nc-icon nc-simple-delete"></i>
+                            <p class="capitalize">Plaza Justicia</p>
+                        </a>
+                    </li>
+                    <li style="height: 30px;">
+                        <a href="/zona_g">
+                            <i class="nc-icon nc-simple-delete"></i>
+                            <p class="capitalize">Zona G</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/zona_h">
+                            <i class="nc-icon nc-simple-delete"></i>
+                            <p class="capitalize">Zona H</p>
+                        </a>
+                    </li>
+                    <li style="height: 45px;">
+                        <a href="/maps">
+                            <i class="nc-icon nc-pin-3"></i>
+                            <p class="capitalize">Mapa</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/down">
+                            <i class="nc-icon nc-cloud-download-93"></i>
+                            <p class="capitalize">Descarga</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel" style="height: 100vh;">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-absolute fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-toggle">
+                            <button type="button" class="navbar-toggler">
+                                <span class="navbar-toggler-bar bar1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </button>
+                        </div>
+                        <a class="navbar-brand">
+                            <i></i>
+                            <p class="capitalize">Zona C - {{mes}} - C/Torre Nueva 1</p>
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <ul class="navbar-nav">
+                            <li class="nav-item btn-rotate dropdown">
+                                <a class="nav-link dropdown-toggle"
+                                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false" style="color: black;">
+                                    <img src="{{ url_for('static', filename=user_picture) }}" width="130" height="70">
+                                    <!-- {{user_picture}} -->
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="/about/">sobre nosotros</a>
+                                    <a class="dropdown-item" href="/logout/">logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="row">
+                    <div class="col-lg-2 col-md-6 col-sm-8">
+                        <div class="card card-stats">
+                            <div class="card-body " style="height: 145px;">
+                                <div class="row">
+                                    <div class="col-7 col-lg-8" style="left: 0px;">
+                                        <div class="numbers">
+                                            <p class="card-category"  style="font-size: 15px; width: 170px;">Visitantes Únicos  <img src="{{ url_for('static', filename='img/info.png') }}" 
+                                                width='50' title={{unique_visitors_text}} 
+                                                style="height: 15px; width: 15px; left: 7px; bottom: 3px;"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id='unique_visitors' class='chart'
+                                    style="width: 280px; height: 270px; position: relative; bottom: 95px; right: 50px;">
+
+                                    <script src="{{ url_for('static', filename='js/plugins/plotly.min.js') }}"></script>
+                                    <script type='text/javascript'>
+                                        var graphs = {{ unique_visitors | safe}};
+                                        graphs.config = {'displaylogo': false, 'displayModeBar': false}
+                                        Plotly.plot('unique_visitors', graphs, {});
+
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-8">
+                        <div class="card card-stats">
+                            <div class="card-body " style="height: 145px;">
+                                <div class="row">
+                                    <div class="col-7 col-lg-8" style="right: 13px;">
+                                        <div class="numbers">
+                                            <p class="card-category"  style="font-size: 15px; width: 170px;">Visitas Totales  <img src="{{ url_for('static', filename='img/info.png') }}" 
+                                                width='50' title={{visits_text}} 
+                                                style="height: 15px; width: 15px; left: 22px; bottom: 3px;"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id='visits' class='chart'
+                                    style="width: 280px; height: 270px; position: relative; bottom: 95px; right: 50px;">
+
+                                    <script src="{{ url_for('static', filename='js/plugins/plotly.min.js') }}"></script>
+                                    <script type='text/javascript'>
+                                        var graphs = {{ visits | safe}};
+                                        graphs.config = {'displaylogo': false, 'displayModeBar': false}
+                                        Plotly.plot('visits', graphs, {});
+
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-8">
+                        <div class="card card-stats">
+                            <div class="card-body " style="height: 145px;">
+                                <div class="row">
+                                    <div class="col-7 col-lg-8" style="right: 13px;">
+                                        <div class="numbers">
+                                            <p class="card-category"  style="font-size: 15px; width: 170px;">Nuevas Visitas <img src="{{ url_for('static', filename='img/info.png') }}" 
+                                                width='50' title={{new_visits_text}} 
+                                                style="height: 15px; width: 15px; left: 22px; bottom: 3px;"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id='new_visits' class='chart'
+                                    style="width: 280px; height: 270px; position: relative; bottom: 95px; right: 50px;">
+
+                                    <script src="{{ url_for('static', filename='js/plugins/plotly.min.js') }}"></script>
+                                    <script type='text/javascript'>
+                                        var graphs = {{ new_visits | safe}};
+                                        graphs.config = {'displaylogo': false, 'displayModeBar': false}
+                                        Plotly.plot('new_visits', graphs, {});
+
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-8">
+                        <div class="card card-stats">
+                            <div class="card-body " style="height: 145px;">
+                                <div class="row">
+                                    <div class="col-7 col-lg-8" style="left: 5px;">
+                                        <div class="numbers">
+                                            <p class="card-category"  style="font-size: 15px; width: 170px;">Visitas Recurrentes <img src="{{ url_for('static', filename='img/info.png') }}" 
+                                                width='50' title={{recurrents_text}} 
+                                                style="height: 15px; width: 15px; left: 2px; bottom: 3px;"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id='recurrents' class='chart'
+                                    style="width: 280px; height: 270px; position: relative; bottom: 95px; right: 50px;">
+
+                                    <script src="{{ url_for('static', filename='js/plugins/plotly.min.js') }}"></script>
+                                    <script type='text/javascript'>
+                                        var graphs = {{ recurrents | safe}};
+                                        graphs.config = {'displaylogo': false, 'displayModeBar': false}
+                                        Plotly.plot('recurrents', graphs, {});
+
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-8">
+                        <div class="card card-stats">
+                            <div class="card-body " style="height: 145px;">
+                                <div class="row">
+                                    <div class="col-7 col-lg-8" style="right: 48px;">
+                                        <div class="numbers">
+                                            <p class="card-category"  style="font-size: 15px; width: 170px;">Ratio<img src="{{ url_for('static', filename='img/info.png') }}" 
+                                                width='50' title={{ratio_text}} 
+                                                style="height: 15px; width: 15px; left: 40px; bottom: 3px;"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id='ratio' class='chart'
+                                    style="width: 280px; height: 260px; position: relative; bottom: 90px; right: 50px;">
+
+                                    <script src="{{ url_for('static', filename='js/plugins/plotly.min.js') }}"></script>
+                                    <script type='text/javascript'>
+                                        var graphs = {{ ratio | safe}};
+                                        graphs.config = {'displaylogo': false, 'displayModeBar': false}
+                                        Plotly.plot('ratio', graphs, {});
+
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                    <div class="col-lg-2 col-md-6 col-sm-8">
+                        <div class="card card-stats">
+                            <div class="card-body " style="height: 145px;">
+                                <div class="row">
+                                    <div class="col-7 col-lg-8" style="left: 3px;">
+                                        <div class="numbers">
+                                            <p class="card-category"  style="font-size: 15px; width: 170px;">Tiempo Medio Zona<img src="{{ url_for('static', filename='img/info.png') }}" 
+                                                width='50' title={{avg_time_zone_text}} 
+                                                style="height: 15px; width: 15px; left: 8px; bottom: 3px;"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id='avg_time_zone' class='chart'
+                                    style="width: 280px; height: 260px; position: relative; bottom: 90px; right: 50px;">
+
+                                    <script src="{{ url_for('static', filename='js/plugins/plotly.min.js') }}"></script>
+                                    <script type='text/javascript'>
+                                        var graphs = {{ avg_time_zone | safe}};
+                                        graphs.config = {'displaylogo': false, 'displayModeBar': false}
+                                        Plotly.plot('avg_time_zone', graphs, {});
+
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                            <div class="card-body " style="height: 145px;">
+                                <div class="row">
+
+                                    <div class="col-7 col-md-8" style="left: 50px;">
+                                        <div class="numbers">
+                                            <p class="card-category">Mejor Dia del Mes <img src="{{ url_for('static', filename='img/info.png') }}" 
+                                                width='50' title={{best_month_day_text}} style="height: 15px; width: 15px; left: 40px;"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id='best_month_day' class=''
+                                    style="position: absolute; top: 50px; left: 65px; font-family: Open Sans, verdana, arial, sans-serif; font-size: 40px;">
+                                    <p style="text-align:center;">{{best_month_day}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                            <div class="card-body " style="height: 145px;">
+                                <div class="row">
+
+                                    <div class="col-7 col-md-8" style="left: 30px;">
+                                        <div class="numbers">
+                                            <p class="card-category">Mejor Clima <img src="{{ url_for('static', filename='img/info.png') }}" 
+                                                width='50' title={{weather_text}} style="height: 15px; width: 15px; left: 50px;"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id='best_day' class='chart'
+                                    style="position: relative; top: 8px; left: 35px; font-family: Open Sans, verdana, arial, sans-serif; font-size: 40px;">
+                                    {{temp}}
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                            <div class="card-body " style="height: 145px;">
+                                <div class="row">
+                                    
+                                    <div class="col-7 col-md-8" style="left: 26px;">
+                                        
+                                        <div class="numbers">
+                                            <p class="card-category">Mejor Hora  <img src="{{ url_for('static', filename='img/info.png') }}" 
+                                                width='50' title={{best_hour_text}} style="height: 15px; width: 15px; left: 50px;"></p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div id='best_day' class='chart'
+                                    style="position: relative; top: 8px; left: 0px; font-family: Open Sans, verdana, arial, sans-serif; font-size: 40px;">
+                                    {{best_hour}}
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                            <div class="card-body " style="height: 145px;">
+                                <div class="row">
+
+                                    <div class="col-7 col-md-8" style="left: 50px;">
+                                        <div class="numbers">
+                                            <p class="card-category">Mejor Dia Semana <img src="{{ url_for('static', filename='img/info.png') }}" 
+                                                width='50' title={{best_day_text}} style="height: 15px; width: 15px; left: 40px;"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id='best_day' class=''
+                                    style="position: absolute; top: 50px; left: 85px; font-family: Open Sans, verdana, arial, sans-serif; font-size: 40px;">
+                                    <p style="text-align:center;">{{best_day}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card ">
+                            <img src="{{ url_for('static', filename='img/info.png') }}" 
+                                                width='50' title={{plot_hour_text}} style="height: 15px; width: 15px; left: 403px; top: 10px;">
+                            <div class="card-header">
+                                <h5 class="card-title"></h5>
+                                <p class="card-category"></p>
+                            </div>
+                            
+                            <div class="card-body" >
+                                
+                                <div id='bar_plot' class='chart'
+                                    style="width: 450px; height: 310px; position: relative; right: 40px; bottom: 95px;">
+                                    
+                                    <script src="{{ url_for('static', filename='js/plugins/plotly.min.js') }}"></script>
+                                    <script type='text/javascript'>
+                                        var graphs = {{ bar_plot | safe}};
+                                        Plotly.plot('bar_plot', graphs, {});
+
+                                    </script>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card card-chart">
+                            <img src="{{ url_for('static', filename='img/info.png') }}" 
+                                                width='50' title={{plot_area_text}} style="height: 15px; width: 15px; left: 870px; top: 10px;">
+                            <div class="card-header">
+                                <h5 class="card-title"></h5>
+                                <p class="card-category"></p>
+                            </div>
+                            <div class="card-body" style="height: 342px; position: relative;">
+                                <div id='area_plot' class='chart'
+                                    style="width: 100px; height: 100px; position: relative; right: 44px; bottom: 110px;">
+
+                                    <script src="{{ url_for('static', filename='js/plugins/plotly.min.js') }}"></script>
+                                    <script type='text/javascript'>
+                                        var graphs = {{ area_plot | safe}};
+                                        Plotly.plot('area_plot', graphs, {});
+
+                                    </script>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer" style="position: absolute; bottom: 0; width: -webkit-fill-available;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href={{links[0]}} target="_blank">Producto</a></li>
+                                <li><a href={{links[1]}} target="_blank">Contacto</a></li>
+                            </ul>
+                        </nav>
+                        <div class="credits ml-auto">
+                            <span class="copyright">
+                                © 2023, SpaceRetail <i class="fa fa-registered"></i></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!--   Core JS Files   -->
+    <script src="{{ url_for('static', filename='js/core/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/core/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/core/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/core/selector_fix.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
+    <!-- Chart JS -->
+    <script src="{{ url_for('static', filename='js/plugins/chartjs.min.js') }}"></script>
+    <!--  Notifications Plugin    -->
+    <script src="{{ url_for('static', filename='js/plugins/bootstrap-notify.js') }}"></script>
+    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="{{ url_for('static', filename='js/paper-dashboard.min.js') }}" type="text/javascript"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,557 @@
+body {
+    background-color: #eeede9;
+}
+
+/*----- barra navegacion eliminacion de estilos en html -----*/
+.logo-image-big {
+    position: relative;
+    right: 8px
+}
+
+.logo-image-big img {
+    width: 150px;
+    height: 95px
+}
+
+.nav-link {
+    color: black
+}
+
+.nav-link img {
+    width: 130px;
+    height: 70ps
+}
+
+/* --------primer bloque------ */
+.card-body-first-block {
+    height: 135px;
+}
+
+.card-stats {
+    width: 100%;
+}
+
+.title {
+    margin-top: 15px;
+    height: 15px;
+    width: 70%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.title p {
+
+    text-align: center;
+    font-size: 15px;
+    width: 80%;
+}
+
+.title img {
+    margin-top: 2px;
+    height: 15px;
+    width: 15px;
+}
+
+.chart1 {
+    width: 350px;
+    height: 250px;
+    position: relative;
+    bottom: 90px;
+    left: -60px;
+}
+
+/* --------segundo bloque------ */
+.card-body2,
+.card-body-best-day {
+    height: 175px;
+}
+
+.div-best-day-month p,
+.best-hour,
+.best_day {
+    margin-top: 30px;
+    font-family: Open Sans, verdana, arial, sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.div-weather {
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    margin-left: 65px;
+    margin-top: 15px;
+
+}
+
+.div-weather img {
+    width: 120px;
+
+}
+
+/* --------tercer bloque------ */
+.img-plot-visits-hours {
+    height: 15px;
+    width: 15px;
+    left: 95%;
+    top: 2%;
+}
+
+.plot {
+    margin-left: 6px;
+    width: 100%;
+}
+
+.plot_area {
+
+    height: 50vh;
+    width: 100%;
+    bottom: 30px;
+}
+
+.card-plot-area {
+    width: 98%;
+}
+
+.card-chart-plot-area,
+.card-chart-visits {
+    height: 546px;
+}
+
+
+
+.chart2 {
+    width: 100%;
+    height: 640px;
+    position: relative;
+    bottom: 90px;
+}
+
+.chart-plot-visits-hours {
+    width: 115%;
+    height: 650px;
+    position: relative;
+    right: 40px;
+    bottom: 80px;
+}
+
+.card-header img {
+    height: 15px;
+    width: 15px;
+    left: 97%;
+    bottom: 10px;
+}
+
+/* -------- responsive de max pantalla a minima------ */
+@media screen and (min-width: 1551px) and (max-width: 1650px) {
+    .chart1 {
+        bottom: 90px;
+        left: -80px;
+    }
+
+    .div-weather img {
+        margin-left: -20px;
+
+    }
+}
+
+@media screen and (min-width: 1401px) and (max-width: 1500px) {
+
+    /* --------primer/segundo bloque(medids carta general 
+    y posicion) medida(1440px)------ */
+    .chart1 {
+        bottom: 75px;
+        left: -100px;
+    }
+
+    .svg-container {
+        position: relative;
+
+    }
+
+    /* --------segundo bloque medida(1440px)------ */
+    .div-best-day-month p {
+
+        font-size: 30px;
+    }
+
+    .best-hour,
+    .best_day {
+        font-size: 35px;
+    }
+
+    .div-weather {
+        margin-left: 20px;
+    }
+
+    .div-weather img {
+        width: 110px;
+
+    }
+
+    .card-body2,
+    .card-body-best-day {
+        height: 150px;
+    }
+
+    /* --------tercer bloque medida(1440px)------ */
+    .card-chart-visits,
+    .card-chart-plot-area {
+        height: 550px;
+
+    }
+
+    .img-plot-visits-hours {
+        left: 93%;
+    }
+
+    .plot_area {
+        height: 55vh;
+        width: 100%;
+    }
+
+    .chart2 {
+        height: 650px;
+        right: 30px;
+        width: 100%;
+    }
+
+    .chart-plot-visits-hours {
+        width: 135%;
+        height: 650px;
+        position: relative;
+        bottom: 80px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1401px) {
+    .chart1 {
+
+        left: -25px;
+    }
+
+}
+
+@media screen and (min-width: 997px) and (max-width: 1170px) {
+
+    /* --------primer/segundo bloque(medidas general cartas) medida(1024px)------ */
+    .chart1 {
+        left: -75px;
+    }
+
+    .numbers1 p {
+        font-size: 12px;
+    }
+
+    /* --------segundo bloque medida(1024px)------ */
+    .div-weather {
+        margin-left: -20px;
+    }
+
+    .div-weather img {
+        width: 85px;
+
+    }
+
+    .div-best-day-month p,
+    .best-hour,
+    .best_day {
+        font-size: 23px;
+
+    }
+
+    .card-body-best-day,
+    .card-body2 {
+        height: 135px;
+    }
+
+    /* --------tercer bloque medida(1024px)------ */
+    .scrollbox {
+        display: none;
+    }
+
+    .plot_area {
+        height: 30vh;
+    }
+
+    .card-chart-visits,
+    .card-chart-plot-area {
+        height: 240px;
+
+    }
+
+    .chart2 {
+        height: 340px;
+        width: 50vw;
+    }
+
+    .img-plot-visits-hours {
+
+        left: 92%;
+    }
+
+    .chart-plot-visits-hours {
+        width: 160%;
+        height: 360px;
+        position: relative;
+        bottom: 95px;
+    }
+}
+
+
+
+
+@media screen and (min-width: 780px) and (max-width: 971px) {
+    .chart1 {
+
+        left: 15px;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 780px) {
+
+    /* --------primer/segundo bloque medida(768px)------ */
+    .chart1 {
+
+        left: -15px;
+        margin-right: 26px;
+    }
+
+    /* --------segundo bloque medida(768px)------ */
+    .best-hour {
+        font-size: 35px;
+    }
+
+    /* --------tercer bloque medida(768px)------ */
+    .plot {
+        margin-left: 0px;
+        height: 70vh;
+    }
+
+    .plot_area {
+        height: 20vh;
+    }
+
+    .card-chart-visits,
+    .card-chart-plot-area {
+        height: 195px;
+
+
+    }
+
+    .chart2 {
+        height: 278px;
+        width: 100%;
+    }
+
+    .chart-plot-visits-hours {
+        width: 100%;
+        height: 280px;
+        position: relative;
+        bottom: 70px;
+    }
+}
+
+@media screen and (min-width: 575px)and (max-width: 600px) {
+    .chart1 {
+        left: -55px;
+
+    }
+}
+
+@media screen and (min-width: 425px)and (max-width: 500px) {
+
+    /* --------primer/segundo bloque medida(425px)------ */
+    .all-card {
+        width: 90vw;
+        margin-left: 22px;
+    }
+
+    .chart1 {
+        left: -10px;
+    }
+
+    /* --------segundo bloque medida(425px)------ */
+    .best-hour {
+        font-size: 28px;
+    }
+
+    .div-weather img {
+        width: 90px;
+    }
+
+
+    /* --------tercer bloque medida(425px)------ */
+    .plot {
+        margin-left: 0px;
+        height: 68vh;
+    }
+
+    .plot_area {
+        height: 30vh;
+    }
+
+    .bg,
+    .scrollbox {
+        display: none;
+    }
+
+    .card-chart-visits,
+    .card-chart-plot-area {
+        height: 185px;
+
+
+    }
+
+    .chart2 {
+        height: 278px;
+        width: 110vw;
+        right: 30px;
+    }
+
+    .chart-plot-visits-hours {
+        width: 120%;
+        height: 260px;
+        bottom: 70px;
+    }
+}
+
+@media screen and (min-width: 375px)and (max-width: 420px) {
+
+    /* --------primer/segundo bloque medida(375px)------ */
+    .all-card {
+        margin-left: 0px;
+    }
+
+    .chart1 {
+        left: -10px;
+    }
+
+    /* --------segundo bloque medida(375px)------ */
+    .best-hour {
+        font-size: 28px;
+    }
+
+    .div-weather {
+
+        margin-left: 45px;
+    }
+
+    .div-weather img {
+
+        width: 120px;
+    }
+
+    /* --------tercer bloque medida(375px)------ */
+    .bg,
+    .scrollbox {
+        display: none;
+    }
+
+    .plot {
+        margin-left: 0px;
+        height: 68vh;
+    }
+
+    .plot_area {
+        height: 30vh;
+    }
+
+    .card-chart-visits,
+    .card-chart-plot-area {
+        height: 185px;
+    }
+
+    .chart2 {
+        height: 278px;
+        width: 110%;
+        position: relative;
+    }
+
+    .chart-plot-visits-hours {
+        width: 130%;
+        height: 290px;
+        position: relative;
+        bottom: 70px;
+    }
+
+    .gridlayer {
+        width: 1000px;
+    }
+}
+
+
+
+@media screen and (min-width: 200px)and (max-width: 370px) {
+
+    /* --------primer/segundo bloque medida(320px)------ */
+    .all-card {
+        margin-left: 0px;
+    }
+
+    .chart1 {
+        left: -45px;
+
+    }
+
+    /* --------segundo bloque medida(320px)------ */
+    .div-weather {
+
+        margin-left: 15px;
+    }
+
+    .div-weather img {
+
+        width: 120px;
+    }
+
+    .div-best-day-month p,
+    .best-hour,
+    .best_day {
+
+        font-size: 35px;
+
+    }
+
+    /* --------tercer bloque medida(320px)------ */
+    .bg,
+    .scrollbox,
+    .modebar-container {
+        display: none;
+    }
+
+    .plot {
+        margin-left: 0px;
+        height: 68vh;
+    }
+
+    .plot_area {
+        height: 30vh;
+    }
+
+    .img-plot-visits-hours {
+        left: 90%;
+    }
+
+    .card-chart-visits,
+    .card-chart-plot-area {
+        height: 185px;
+    }
+
+    .chart2 {
+        height: 278px;
+        width: 130%;
+        position: relative;
+        right: 30px;
+    }
+
+    .chart-plot-visits-hours {
+        width: 130%;
+        height: 260px;
+        position: relative;
+        bottom: 70px;
+    }
+}
